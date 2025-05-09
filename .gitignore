@@ -1,0 +1,31 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular / Ionic
+.angular/cache/
+.angular/
+www/
+dist/
+build/
+*.log
+*.tsbuildinfo
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*
+
+# Capacitor
+android/app/build/
+ios/Pods/
+ios/DerivedData/
+
+# Outros
+.DS_Store
+Thumbs.db
