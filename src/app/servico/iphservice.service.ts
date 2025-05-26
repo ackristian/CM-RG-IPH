@@ -14,7 +14,13 @@ export class IphserviceService {
   constructor(private http: HttpClient) {}
 
   getTodoas():Observable<Article[]> {
-    return this.http.get<Newiph>(`${url}apiKey=${apiKey}`).pipe(
+    return this.http.get<Newiph>(`${url}&apiKey=${apiKey}`).pipe(
+      map(({ articles }) => articles)
+    );
+  }
+
+  getPorCaregoria(categoria: string): Observable<Article[]> {
+    return this.http.get<Newiph>(`${url}&category=${categoria}&apiKey=${apiKey}`).pipe(
       map(({ articles }) => articles)
     );
   }

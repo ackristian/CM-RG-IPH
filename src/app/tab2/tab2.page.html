@@ -4,4 +4,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"> </ion-content>
+<ion-content>
+  <ion-segment  
+  (ionChange)="segmentChanged($event)" 
+  mode="md"
+  scrollable
+  >
+    <ion-segment-button *ngFor="let category of categories" [value]="category">
+      <ion-label class="ion-text-capitalize">{{ categoriasTraduzidas[category] | titlecase }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <app-articles [articles]="articles"></app-articles>
+
+</ion-content>
+

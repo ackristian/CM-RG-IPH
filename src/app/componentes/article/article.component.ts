@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Article } from 'src/app/interfaces/news';
 
 @Component({
   standalone: false,
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent  implements OnInit {
+
+  @Input() article!: Article;
+  @Input() index!: number;
 
   constructor() { }
 

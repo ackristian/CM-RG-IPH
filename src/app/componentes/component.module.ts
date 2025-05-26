@@ -16,7 +16,8 @@ import { ArticleComponent } from './article/article.component';
     IonicModule
   ],
   exports:[
-    ArticlesComponent
+    ArticlesComponent,
+    ArticleComponent
   ]
 })
 export class ComponentModule { }

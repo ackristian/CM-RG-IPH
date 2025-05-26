@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IonCard, IonCol, IonGrid } from "@ionic/angular/standalone";
 import { Article } from 'src/app/interfaces/news';
 
 @Component({
